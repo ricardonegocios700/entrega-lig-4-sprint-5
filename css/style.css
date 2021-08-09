@@ -1,0 +1,15 @@
+.divisoria{
+    background-color: rgb(0, 2, 14);
+    width: 25px;
+    height: 25px;
+}
+
+.espaco_branco{
+    background-color: rgb(97, 250, 8);
+    width: 25px;
+    height: 25px;
+}
+
+.linha{
+    display: flex;
+}
