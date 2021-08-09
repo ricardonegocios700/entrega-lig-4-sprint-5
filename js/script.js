@@ -31,3 +31,22 @@ let criarMapa = () => {
 }
 
 criarMapa()
+
+
+// função de vitoria 
+
+// document.addEventListener('click' , (event) => {
+//     const box = document.createElement('div');
+//     box.id = 'popup'
+//     box.innerHTML = 'Parabens! Você conseguiu!'
+//     document.body.appendChild(box);
+//     const okBtn = document.createElement('button');
+//     okBtn.id = 'popup__button'
+//     okBtn.innerHTML = 'Close';
+//     box.appendChild(okBtn);
+//     let audio = new Audio('tada.wav');
+//     audio.play();
+//     okBtn.addEventListener('click' , event => {
+//         location.reload()
+//     })
+// });

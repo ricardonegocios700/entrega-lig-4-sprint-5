@@ -13,3 +13,37 @@
 .linha{
     display: flex;
 }
+/*#popup{
+    top: 25vh;
+    left: 35vw;
+    height: 40vh;
+    width: 30vw;
+    background-color: rgba(0, 255, 255, 0.486);
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    border-top: 5px solid ;
+    border-bottom: 5px solid;
+    font-size: 25px;
+    
+}
+#popup__button{
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    margin-top: 5vh;
+    height: 5vh;
+    width: 5vw;
+    transition: all .2s;
+    border: 1px solid rgba(0, 255, 255, 0.486);
+    box-shadow: 1px 1px 6px black;
+}
+#popup__button:hover{
+    transform: scale(1.1, 1.1);
+    background-color: rgba(0, 255, 255, 0.76);
+    color: black;
+
+}*/
