@@ -24,6 +24,7 @@ let criarMapa = () => {
     criarBotao.setAttribute(`class`,`botao_play`)
     
   }
+  
 
    for(let i = 0; i < mapa.length; i++){
 
@@ -51,6 +52,18 @@ let criarMapa = () => {
 criarMapa()
 
 
+
+
+
+
+// const partida = event => {
+// alert('clicou');
+// }
+// let botoes = document.querySelectorAll('.botao_play');
+// console.log(botoes);
+
+// botoes.forEach(botaoPartida => botaoPartida.addEventListener('click' , partida));
+
 // função de vitoria 
 
 // document.addEventListener('click' , (event) => {
@@ -68,3 +81,18 @@ criarMapa()
 //         location.reload()
 //     })
 // });
+// const disco = document.createElement('div');
+// disco.classList = 'disco'
+//let control = true;
+//     if(control === true){
+//     disco.style.backgroundColor = 'red';
+    
+//     control = false
+//     }
+//    else if(control === false){
+//          disco.style.backgroundColor = 'blue'
+         
+//          control = true
+//          // linha1[0] linha2[0] 
+//      }
+//     }
