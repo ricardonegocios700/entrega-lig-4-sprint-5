@@ -1,6 +1,6 @@
 .divisoria{
     background-color: rgb(0, 2, 14);
-    width: 25px;
+    width: 5px;
     height: 25px;
 }
 
@@ -12,4 +12,9 @@
 
 .linha{
     display: flex;
+}
+
+#dv{
+    border: black solid;
+    width: 235px;
 }
