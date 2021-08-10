@@ -1,66 +1,48 @@
-let red  = ["l0_0", "l0_8", "l0_2", "l0_3", "l0_5"];
-let blue = ["l1_0", "l1_1", "l1_2", "l1_3"];
+let red  = ["l0_3", "l0_5", "l0_6", "l0_7"];  // receber de script.js
+let blue = ["l1_0", "l1_1", "l1_2", "l1_3"];  // receber de script.js
+let discoDaVez = "l0_4";  // receber de script.js
+let corDaVez   = "red";  // receber de script.js
 
-let discoDaVez = "l0_4";
-let contrutorPosicao = discoDaVez.substring(0,3)
-let corDaVez   = "red";
+let tamanho = Number(discoDaVez.slice(3));
+let preNome = discoDaVez.substring(0,3)
 
-function verificarHorizontalMenos() {
-  let contador = 0;
-  let discoComparando = Number(discoDaVez[3])-1
-  let comparacao = `${contrutorPosicao}${discoComparando}`;
-  console.log(comparacao)
+function verificarGeral(cont) {
+  let contador = Number(cont)
+  contador = verificarHorizontalMenos(contador)
+  if (contador < 4) {
+    contador = verificarHorizontalMais(contador)
+  }
+  return contador
+}
 
-  if (corDaVez === "red") {
-    for (let i = 0; i < red.length; i++) {
-      if (red.includes(comparacao)) {
-        contador++;
-      } else {
-        compararHorizontalMais();
-      }
-      discoComparando = Number(comparacao[3])-1;
-      comparacao = `${contrutorPosicao}${discoComparando}`;
+function verificarHorizontalMenos(contador) {
+  let proximoNr = tamanho - 1;
+  let comparacao = `${preNome}${proximoNr}`;
+  
+  for (let i = tamanho; i > 0; i--) {
+    if (red.includes(comparacao)) {
+      contador++;
+    } else {
+      return contador;
     }
-  } else {
-    for (let i = 0; i < blue.length; i++) {
-      if (blue.includes(comparacao)) {
-        contador++;
-      } else {
-        compararHorizontalMais();
-      }
-      discoComparando = Number(comparacao[3])-1;
-      comparacao = `${contrutorPosicao}${discoComparando}`;
-    }
+    proximoNr = Number(comparacao[3])-1;
+    comparacao = `${preNome}${proximoNr}`;
   }
   return contador;
 }
 
-function compararHorizontalMais() {
-  let contador = 0;
-  let discoComparando = Number(discoDaVez[3])+1
-  let comparacao = `${contrutorPosicao}${discoComparando}`;
-  console.log(comparacao)
-
-  if (corDaVez === "red") {
-    for (let i = 0; i < red.length; i++) {
-      if (red.includes(comparacao)) {
-        contador++;
-      } else {
-        return "antes não tem";
-      }
-      discoComparando = Number(comparacao[3])+1;
-      comparacao = `${contrutorPosicao}${discoComparando}`;
+function verificarHorizontalMais(contador) {
+  let proximoNr = tamanho + 1;
+  let comparacao = `${preNome}${proximoNr}`;
+  for (let i = tamanho; i < 8; i++) {
+    if (red.includes(comparacao)) {
+      contador++;
+    } else {
+      return contador;
     }
-  } else {
-    for (let i = 0; i < blue.length; i++) {
-      if (blue.includes(comparacao)) {
-        contador++;
-      } else {
-        return "antes não tem";
-      }
-      discoComparando = Number(comparacao[3])+1;
-      comparacao = `${contrutorPosicao}${discoComparando}`;
-    }
+    proximoNr = Number(comparacao[3])+1;
+    comparacao = `${preNome}${proximoNr}`;
   }
   return contador;
 }
+
