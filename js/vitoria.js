@@ -1,40 +1,76 @@
-let red  = ["l0_3", "l0_5", "l2_4", "l0_4"];  // receber de script.js
+let red  = ["l0_8", "l1_0", "l2_2", "l4_4"];  // receber de script.js
 let blue = ["l1_0", "l1_1", "l1_2", "l1_3"];  // receber de script.js
-let discoDaVez = "l1_4";  // receber de script.js
+let discoDaVez = "l3_3";  // receber de script.js
 let corDaVez   = "red";  // receber de script.js
-let posNome = "";
+let posNome;
 let tamanho = Number(discoDaVez[3]);
-let preNome = discoDaVez.substring(0,3)
+let preNome = discoDaVez.substring(0,3);
+let coluna;
+let linha;
 
-function verificarGeral(cont) {
-  let contador = Number(cont)
-  contador = verificarHorizontalMenos(contador)
+function verificarGeral() {
+  let contador = 1;
+  contador = verificarHorizontalMenos(contador);
   if (contador < 4) {
-    contador = verificarHorizontalMais(contador)
+    contador = verificarHorizontalMais(contador);
   }
   if (contador < 4) {
     contador = 1;
-    posNome = discoDaVez.substring(2,4)
+    posNome = discoDaVez.substring(2,4);
     tamanho = Number(discoDaVez[1]);
-    contador = verificarVerticalMais(contador)
+    contador = verificarVerticalMais(contador);
   }
   if (contador < 4) {
-    contador = verificarVerticalMenos(contador)
+    contador = verificarVerticalMenos(contador);
   }
-  return contador
+  if (contador < 4) {
+    contador = 1;
+    coluna = Number(discoDaVez[3]);
+    linha  = Number(discoDaVez[1]);
+    contador = verificarDiagonalEsqMenos(contador);
+  }
+  if (contador < 4) {
+    coluna = Number(discoDaVez[3]);
+    linha  = Number(discoDaVez[1]);
+    contador = verificarDiagonalDirMais(contador);
+  }
+
+  if (contador < 4) {
+    return `Siga o jogo, conseguiu ${contador} fichas na sequência`
+  }
+  return `Você venceu, conseguiu ${contador} fichas na sequência`
+}
+
+function verificarDiagonalDirMais(contador) {
+  let proximaL = linha + 1;
+  let proximaC = coluna + 1;
+  let comparacao = `l${proximaL}_${proximaC}`;
+  for (let i = tamanho; i < 7; i++) {
+    if (red.includes(comparacao)) {
+      contador++;
+    } else {
+      return contador;
+    }
+    proximaL = Number(comparacao[1])+1;
+    proximaC = Number(comparacao[3])+1;
+    comparacao = `l${proximaL}_${proximaC}`;
+  }
+  return contador;
 }
 
 function verificarDiagonalEsqMenos(contador) {
-  let proximoNr = tamanho - 1;
-  let comparacao = `l${proximoNr}${posNome}`;
+  let proximaL = linha - 1;
+  let proximaC = coluna - 1;
+  let comparacao = `l${proximaL}_${proximaC}`;
   for (let i = tamanho; i > 0; i--) {
     if (red.includes(comparacao)) {
       contador++;
     } else {
       return contador;
     }
-    proximoNr = Number(comparacao[1])-1;
-    comparacao = `l${proximoNr}${posNome}`;
+    proximaL = Number(comparacao[1])-1;
+    proximaC = Number(comparacao[3])-1;
+    comparacao = `l${proximaL}_${proximaC}`;
   }
   return contador;
 }
@@ -88,7 +124,7 @@ function verificarHorizontalMenos(contador) {
 function verificarHorizontalMais(contador) {
   let proximoNr = tamanho + 1;
   let comparacao = `${preNome}${proximoNr}`;
-  for (let i = tamanho; i < 8; i++) {
+  for (let i = tamanho; i < 7; i++) {
     if (red.includes(comparacao)) {
       contador++;
     } else {
