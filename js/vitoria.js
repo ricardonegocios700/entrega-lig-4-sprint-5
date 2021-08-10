@@ -1,6 +1,6 @@
-let red  = ["l0_8", "l1_0", "l2_2", "l4_4"];  // receber de script.js
+let red  = ["l0_8", "l2_2", "l3_1", "l4_0"];  // receber de script.js
 let blue = ["l1_0", "l1_1", "l1_2", "l1_3"];  // receber de script.js
-let discoDaVez = "l3_3";  // receber de script.js
+let discoDaVez = "l1_3";  // receber de script.js
 let corDaVez   = "red";  // receber de script.js
 let posNome;
 let tamanho = Number(discoDaVez[3]);
@@ -34,6 +34,12 @@ function verificarGeral() {
     linha  = Number(discoDaVez[1]);
     contador = verificarDiagonalDirMais(contador);
   }
+  if (contador < 4) {
+    contador = 1;
+    coluna = Number(discoDaVez[3]);
+    linha  = Number(discoDaVez[1]);
+    contador = verificarDiagonalEsqMais(contador);
+  }
 
   if (contador < 4) {
     return `Siga o jogo, conseguiu ${contador} fichas na sequência`
@@ -41,11 +47,28 @@ function verificarGeral() {
   return `Você venceu, conseguiu ${contador} fichas na sequência`
 }
 
+function verificarDiagonalEsqMais(contador) {
+  let proximaL = linha + 1;
+  let proximaC = coluna - 1;
+  let comparacao = `l${proximaL}_${proximaC}`;
+  for (let i = linha; i < 5; i++) {
+    if (red.includes(comparacao)) {
+      contador++;
+    } else {
+      //return contador;
+    }
+    proximaL = Number(comparacao[1])+1;
+    proximaC = Number(comparacao[3])-1;
+    comparacao = `l${proximaL}_${proximaC}`;
+  }
+  return contador;
+}
+
 function verificarDiagonalDirMais(contador) {
   let proximaL = linha + 1;
   let proximaC = coluna + 1;
   let comparacao = `l${proximaL}_${proximaC}`;
-  for (let i = tamanho; i < 7; i++) {
+  for (let i = tamanho; i < 6; i++) {
     if (red.includes(comparacao)) {
       contador++;
     } else {
@@ -124,7 +147,7 @@ function verificarHorizontalMenos(contador) {
 function verificarHorizontalMais(contador) {
   let proximoNr = tamanho + 1;
   let comparacao = `${preNome}${proximoNr}`;
-  for (let i = tamanho; i < 7; i++) {
+  for (let i = tamanho; i < 6; i++) {
     if (red.includes(comparacao)) {
       contador++;
     } else {
