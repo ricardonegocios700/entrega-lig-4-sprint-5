@@ -16,6 +16,7 @@ let criarMapa = () => {
        criarLinha.setAttribute(`class`,`linha`)
        dv.appendChild(criarLinha)
        let linha = mapa[i]
+       let contador = 0
      for(let a = 0; a < linha.length; a++){
       let criarColuna = document.createElement("div")
       if(linha[a] === "c"){
@@ -24,7 +25,8 @@ let criarMapa = () => {
         } else{
         criarLinha.appendChild(criarColuna)
         criarColuna.classList.add("espaco_branco")
-        criarColuna.setAttribute(`id`,`l${i}_${a}`)
+        criarColuna.setAttribute(`id`,`l${i}_${contador}`)
+        contador ++
       }
      }
   }
