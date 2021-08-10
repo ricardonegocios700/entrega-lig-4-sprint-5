@@ -16,5 +16,26 @@
 
 #dv{
     border: black solid;
-    width: 235px;
+    width: 205px;
+}
+
+.botao_play{
+    height: 15px;
+    border-radius: 90%;
+}
+
+.div_botao{
+        background-color: rgb(234, 234, 241);
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        border: #ccc solid 1px;
+}
+
+.all_buttons{
+    display: flex;
+    width: 205px;
+    height: 25px;
 }
