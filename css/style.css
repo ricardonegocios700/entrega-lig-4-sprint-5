@@ -54,10 +54,12 @@
     
 
 .ficha_player{
-    background-color: red;
+    background-color: rgb(234, 234, 241);
+    background-image: url(/img/ficha_poker_red.png);
     border-radius: 90%;
-    width: 15px;
-    height: 15px;
+    width: 48px;
+    height: 48px;
+    /* background-size: 96px 96px; */
     margin: auto;
     position: relative;
     top: 50%;
@@ -66,10 +68,11 @@
 
 
 .ficha_computer{
-    background-color: black;
+    background-color: rgb(234, 234, 241);
+    background-image: url(/img/ficha_poker_black.png);
     border-radius: 90%;
-    width: 15px;
-    height: 15px;
+    width: 48px;
+    height: 48px;
     margin: auto;
     position: relative;
     top: 50%;
