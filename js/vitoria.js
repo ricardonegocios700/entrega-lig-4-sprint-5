@@ -1,36 +1,21 @@
-// verificarHorizontalMenos
-//let red  = ["l3_2", "l3_1", "l3_0"];  // receber de script.js
-// verificarHorizontalMais
-//let red  = ["l3_4", "l3_5", "l3_6"];  // receber de script.js
-// verificarHorizontalMais & verificarHorizontalMenos
-//let red  = ["l3_4", "l3_2", "l3_1"];  // receber de script.js
-// verificarVerticalMenos
-//let red  = ["l2_3", "l1_3", "l0_3"];  // receber de script.js
-// verificarVerticalMais
-//let red  = ["l4_3", "l5_3", "l6_3"];  // receber de script.js
-// verificarVerticalMais verificarVerticalMenos
-//let red  = ["l4_3", "l2_3", "l1_3"];  // receber de script.js
-// verificarDiagonalEsqMenos
-//"l3_4" let red  = ["l2_3", "l1_2", "l0_1"];  // receber de script.js
-// verificarDiagonalDirMais
-//"l3_1" let red  = ["l4_2", "l5_3", "l6_4"];  // receber de script.js
-// verificarDiagonalDirMais e verificarDiagonalEsqMenos
-//"l3_4" let red  = ["l2_3", "l1_2", "l4_5"];  // receber de script.js
-// verificarDiagonalEsqMais
-//let red  = ["l2_4", "l1_5", "l0_6"];  // receber de script.js
-// verificarDiagonalDirMenos
-let red  = ["l2_4", "l1_5", "l0_6"];  // receber de script.js
-
-let blue = ["l1_0", "l1_1", "l1_2", "l1_3"];  // receber de script.js
-let discoDaVez = "l3_3";             // receber de script.js
-let corDaVez   = "red";                       // receber de script.js
+let discoDaVez;
 let posNome;
-let tamanho = Number(discoDaVez[3]);
-let preNome = discoDaVez.substring(0,3);
+let tamanho;
+let preNome;
 let coluna;
 let linha;
 
 function verificarVitoria() {
+  if (control === true) {
+    corDaVez = "red";
+    discoDaVez = red[red.length -1]
+  } else {
+    corDavez = "black";
+    discoDaVez = black[black.length -1]
+  }
+  tamanho = Number(discoDaVez[3]);
+  preNome = discoDaVez.substring(0,3);
+  
   let contador = 1;
   contador = verificarHorizontalMenos(contador);
   if (contador < 4) {
@@ -69,9 +54,11 @@ function verificarVitoria() {
   }
 
   if (contador < 4) {
-    return `Siga o jogo, conseguiu ${contador} fichas na sequência`
+    console.log(`Siga o jogo`);
+    return
   }
-  return `Você venceu, conseguiu ${contador} fichas na sequência`
+  console.log(`Você venceu, conseguiu ${contador} fichas na sequência`);
+  return
 }
 
 function verificarDiagonalDirMenos(contador) {
@@ -204,7 +191,7 @@ function verificarHorizontalMais(contador) {
       comparacao = `${preNome}${proximoNr}`;
     }
   }
-  if (corDaVez === "blue") {
+  if (corDaVez === "black") {
     for (let i = tamanho; i < 6; i++) {
       if (red.includes(comparacao)) {
         contador++;
