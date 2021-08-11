@@ -68,6 +68,14 @@
 
 }
 
+.red{
+    background-color: #C01C1C;
+}
+    
+.black{
+    background-color: #0A0A0A;
+}
+
 .ficha_player {
     background-color: rgb(234, 234, 241);
     background-image: url(/img/ficha_poker_red.png);
