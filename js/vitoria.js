@@ -191,15 +191,30 @@ function verificarHorizontalMenos(contador) {
 
 function verificarHorizontalMais(contador) {
   let proximoNr = tamanho + 1;
-  let comparacao = `${preNome}${proximoNr}`; //l1_3  => l1_4 => l1_2 => l1_1
-  for (let i = tamanho; i < 6; i++) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  let comparacao = `${preNome}${proximoNr}`;
+
+  if (corDaVez === "red") {
+    for (let i = tamanho; i < 6; i++) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[3])+1;
+      comparacao = `${preNome}${proximoNr}`;
     }
-    proximoNr = Number(comparacao[3])+1;
-    comparacao = `${preNome}${proximoNr}`;
   }
+  if (corDaVez === "blue") {
+    for (let i = tamanho; i < 6; i++) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[3])+1;
+      comparacao = `${preNome}${proximoNr}`;
+    }
+  }
+
   return contador;
 }
