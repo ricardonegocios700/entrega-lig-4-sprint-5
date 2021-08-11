@@ -105,7 +105,7 @@ let linha2_6 = document.getElementById("l2_6")
 let linha1_6 = document.getElementById("l1_6")
 let linha0_6 = document.getElementById("l0_6")
 
-
+let dropSound = document.getElementById("drop_sound")
 
 let red = []
 let black = []
@@ -118,7 +118,7 @@ button1.addEventListener("click", () => {
     ficha.classList.add("ficha_player")
     red.push("l5_0")
     control = false
-    console.log(control)
+    dropSound.play()
 
 
   }else if((linha4_0.childElementCount === 0) && (control === true)){
@@ -127,6 +127,7 @@ button1.addEventListener("click", () => {
     ficha.classList.add("ficha_player")
     red.push("l4_0")
     control = false
+    dropSound.play()
 
   }else if((linha3_0.childElementCount === 0) && (control === true)){
     let ficha = document.createElement("div")
@@ -134,6 +135,7 @@ button1.addEventListener("click", () => {
     ficha.classList.add("ficha_player")
     red.push("l3_0")
     control = false
+    dropSound.play()
 
   }else if((linha2_0.childElementCount === 0) && (control === true)){
     let ficha = document.createElement("div")
@@ -141,6 +143,7 @@ button1.addEventListener("click", () => {
     ficha.classList.add("ficha_player")
     red.push("l2_0")
     control = false
+    dropSound.play()
 
   }else if((linha1_0.childElementCount === 0) && (control === true)){
     let ficha = document.createElement("div")
@@ -148,6 +151,7 @@ button1.addEventListener("click", () => {
     ficha.classList.add("ficha_player")
     red.push("l1_0")
     control = false
+    dropSound.play()
 
   } else if((linha0_0.childElementCount === 0) && (control === true)){
     let ficha = document.createElement("div")
@@ -155,6 +159,7 @@ button1.addEventListener("click", () => {
     ficha.classList.add("ficha_player")
     red.push("l0_0")
     control = false
+    dropSound.play()
 
   }
   
@@ -166,6 +171,7 @@ button1.addEventListener("click", () => {
     ficha2.classList.add("ficha_computer")
     black.push("l5_0")
     control = true
+    dropSound.play()
 
   }else if((linha4_0.childElementCount === 0) && (control === false)){
     let ficha2 = document.createElement("div")
@@ -173,13 +179,14 @@ button1.addEventListener("click", () => {
     ficha2.classList.add("ficha_computer")
     black.push("l4_0")
     control = true
+    dropSound.play()
 
   }else if((linha3_0.childElementCount === 0) && (control === false)){
     let ficha2 = document.createElement("div")
     linha3_0.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l3_0")
-    
+    dropSound.play()
     control = true
 
   }else if((linha2_0.childElementCount === 0) && (control === false)){
@@ -187,7 +194,7 @@ button1.addEventListener("click", () => {
     linha2_0.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l2_0")
-   
+    dropSound.play()
     control = true
 
 
@@ -196,7 +203,7 @@ button1.addEventListener("click", () => {
     linha1_0.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l1_0")
-    
+    dropSound.play()
     control = true
 
 
@@ -206,7 +213,7 @@ button1.addEventListener("click", () => {
     linha0_0.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l0_0")
-   
+    dropSound.play()
     control = true
 
   }
@@ -219,6 +226,7 @@ button2.addEventListener("click", () => {
     linha5_1.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l5_1")
+    dropSound.play()
     control = false
 
   }else if((linha4_1.childElementCount === 0) && (control === true)){
@@ -226,6 +234,7 @@ button2.addEventListener("click", () => {
     linha4_1.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l4_1")
+    dropSound.play()
     control = false
 
   }else if((linha3_1.childElementCount === 0) && (control === true)){
@@ -233,6 +242,7 @@ button2.addEventListener("click", () => {
     linha3_1.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l3_1")
+    dropSound.play()
     control = false
 
   }else if((linha2_1.childElementCount === 0) && (control === true)){
@@ -240,6 +250,7 @@ button2.addEventListener("click", () => {
     linha2_1.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l2_1")
+    dropSound.play()
     control = false
 
   }else if((linha1_1.childElementCount === 0) && (control === true)){
@@ -247,6 +258,7 @@ button2.addEventListener("click", () => {
     linha1_1.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l1_1")
+    dropSound.play()
     control = false
 
   } else if((linha0_1.childElementCount === 0) && (control === true)){
@@ -255,6 +267,7 @@ button2.addEventListener("click", () => {
     ficha.classList.add("ficha_player")
     red.push("l0_1")
     control = false
+    dropSound.play()
 
   }
   
@@ -266,6 +279,7 @@ button2.addEventListener("click", () => {
     ficha2.classList.add("ficha_computer")
     black.push("l5_1")
     control = true
+    dropSound.play()
 
   }else if((linha4_1.childElementCount === 0) && (control === false)){
     let ficha2 = document.createElement("div")
@@ -273,13 +287,14 @@ button2.addEventListener("click", () => {
     ficha2.classList.add("ficha_computer")
     black.push("l4_1")
     control = true
+    dropSound.play()
 
   }else if((linha3_1.childElementCount === 0) && (control === false)){
     let ficha2 = document.createElement("div")
     linha3_1.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l3_1")
-    
+    dropSound.play()
     control = true
 
   }else if((linha2_1.childElementCount === 0) && (control === false)){
@@ -287,7 +302,7 @@ button2.addEventListener("click", () => {
     linha2_1.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l2_1")
-   
+    dropSound.play()
     control = true
 
 
@@ -296,7 +311,7 @@ button2.addEventListener("click", () => {
     linha1_1.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l1_1")
-    
+    dropSound.play()
     control = true
 
 
@@ -306,7 +321,7 @@ button2.addEventListener("click", () => {
     linha0_1.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l0_1")
-   
+    dropSound.play()
     control = true
 
   }
@@ -320,6 +335,7 @@ button3.addEventListener("click", () => {
     linha5_2.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l5_2")
+    dropSound.play()
     control = false
 
   }else if((linha4_2.childElementCount === 0) && (control === true)){
@@ -327,6 +343,7 @@ button3.addEventListener("click", () => {
     linha4_2.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l4_2")
+    dropSound.play()
     control = false
 
   }else if((linha3_2.childElementCount === 0) && (control === true)){
@@ -334,6 +351,7 @@ button3.addEventListener("click", () => {
     linha3_2.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l3_2")
+    dropSound.play()
     control = false
 
   }else if((linha2_2.childElementCount === 0) && (control === true)){
@@ -341,6 +359,7 @@ button3.addEventListener("click", () => {
     linha2_2.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l2_2")
+    dropSound.play()
     control = false
 
   }else if((linha1_2.childElementCount === 0) && (control === true)){
@@ -348,6 +367,7 @@ button3.addEventListener("click", () => {
     linha1_2.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l1_2")
+    dropSound.play()
     control = false
 
   } else if((linha0_2.childElementCount === 0) && (control === true)){
@@ -355,6 +375,7 @@ button3.addEventListener("click", () => {
     linha0_2.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l0_2")
+    dropSound.play()
     control = false
 
   }
@@ -366,6 +387,7 @@ button3.addEventListener("click", () => {
     linha5_2.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l5_2")
+    dropSound.play()
     control = true
 
   }else if((linha4_2.childElementCount === 0) && (control === false)){
@@ -373,6 +395,7 @@ button3.addEventListener("click", () => {
     linha4_2.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l4_2")
+    dropSound.play()
     control = true
 
   }else if((linha3_2.childElementCount === 0) && (control === false)){
@@ -380,7 +403,7 @@ button3.addEventListener("click", () => {
     linha3_2.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l3_2")
-    
+    dropSound.play()
     control = true
 
   }else if((linha2_2.childElementCount === 0) && (control === false)){
@@ -388,7 +411,7 @@ button3.addEventListener("click", () => {
     linha2_2.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l2_2")
-   
+    dropSound.play()
     control = true
 
 
@@ -397,7 +420,7 @@ button3.addEventListener("click", () => {
     linha1_2.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l1_2")
-    
+    dropSound.play()
     control = true
 
 
@@ -407,7 +430,7 @@ button3.addEventListener("click", () => {
     linha0_2.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l0_2")
-   
+    dropSound.play()
     control = true
 
   }
@@ -422,6 +445,7 @@ button4.addEventListener("click", () => {
     linha5_3.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l5_3")
+    dropSound.play()
     control = false
 
   }else if((linha4_3.childElementCount === 0) && (control === true)){
@@ -429,6 +453,7 @@ button4.addEventListener("click", () => {
     linha4_3.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l4_3")
+    dropSound.play()
     control = false
 
   }else if((linha3_3.childElementCount === 0) && (control === true)){
@@ -436,6 +461,7 @@ button4.addEventListener("click", () => {
     linha3_3.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l3_3")
+    dropSound.play()
     control = false
 
   }else if((linha2_3.childElementCount === 0) && (control === true)){
@@ -443,6 +469,7 @@ button4.addEventListener("click", () => {
     linha2_3.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l2_3")
+    dropSound.play()
     control = false
 
   }else if((linha1_3.childElementCount === 0) && (control === true)){
@@ -450,6 +477,7 @@ button4.addEventListener("click", () => {
     linha1_3.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l1_3")
+    dropSound.play()
     control = false
 
   } else if((linha0_3.childElementCount === 0) && (control === true)){
@@ -457,6 +485,7 @@ button4.addEventListener("click", () => {
     linha0_3.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l0_3")
+    dropSound.play()
     control = false
 
   }
@@ -468,6 +497,7 @@ button4.addEventListener("click", () => {
     linha5_3.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l5_3")
+    dropSound.play()
     control = true
 
   }else if((linha4_3.childElementCount === 0) && (control === false)){
@@ -475,6 +505,7 @@ button4.addEventListener("click", () => {
     linha4_3.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l4_3")
+    dropSound.play()
     control = true
 
   }else if((linha3_3.childElementCount === 0) && (control === false)){
@@ -482,7 +513,7 @@ button4.addEventListener("click", () => {
     linha3_3.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l3_3")
-    
+    dropSound.play()
     control = true
 
   }else if((linha2_3.childElementCount === 0) && (control === false)){
@@ -490,7 +521,7 @@ button4.addEventListener("click", () => {
     linha2_3.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l2_3")
-   
+    dropSound.play()
     control = true
 
 
@@ -499,7 +530,7 @@ button4.addEventListener("click", () => {
     linha1_3.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l1_3")
-    
+    dropSound.play()
     control = true
 
 
@@ -509,7 +540,7 @@ button4.addEventListener("click", () => {
     linha0_3.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l0_3")
-   
+    dropSound.play()
     control = true
 
   }
@@ -523,6 +554,7 @@ button5.addEventListener("click", () => {
     linha5_4.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l5_4")
+    dropSound.play()
     control = false
 
   }else if((linha4_4.childElementCount === 0) && (control === true)){
@@ -530,6 +562,7 @@ button5.addEventListener("click", () => {
     linha4_4.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l4_4")
+    dropSound.play()
     control = false
 
   }else if((linha3_4.childElementCount === 0) && (control === true)){
@@ -537,6 +570,7 @@ button5.addEventListener("click", () => {
     linha3_4.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l3_4")
+    dropSound.play()
     control = false
 
   }else if((linha2_4.childElementCount === 0) && (control === true)){
@@ -544,6 +578,7 @@ button5.addEventListener("click", () => {
     linha2_4.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l2_4")
+    dropSound.play()
     control = false
 
   }else if((linha1_4.childElementCount === 0) && (control === true)){
@@ -551,6 +586,7 @@ button5.addEventListener("click", () => {
     linha1_4.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l1_4")
+    dropSound.play()
     control = false
 
   } else if((linha0_4.childElementCount === 0) && (control === true)){
@@ -558,6 +594,7 @@ button5.addEventListener("click", () => {
     linha0_4.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l0_4")
+    dropSound.play()
     control = false
 
   }
@@ -569,6 +606,7 @@ button5.addEventListener("click", () => {
     linha5_4.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l5_4")
+    dropSound.play()
     control = true
 
   }else if((linha4_4.childElementCount === 0) && (control === false)){
@@ -576,6 +614,7 @@ button5.addEventListener("click", () => {
     linha4_4.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l4_4")
+    dropSound.play()
     control = true
 
   }else if((linha3_4.childElementCount === 0) && (control === false)){
@@ -583,7 +622,7 @@ button5.addEventListener("click", () => {
     linha3_4.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l3_4")
-    
+    dropSound.play()
     control = true
 
   }else if((linha2_4.childElementCount === 0) && (control === false)){
@@ -591,7 +630,7 @@ button5.addEventListener("click", () => {
     linha2_4.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l2_4")
-   
+    dropSound.play()
     control = true
 
 
@@ -600,7 +639,7 @@ button5.addEventListener("click", () => {
     linha1_4.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l1_4")
-    
+    dropSound.play()
     control = true
 
 
@@ -610,7 +649,7 @@ button5.addEventListener("click", () => {
     linha0_4.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l0_4")
-   
+    dropSound.play()
     control = true
 
   }
@@ -624,6 +663,7 @@ button6.addEventListener("click", () => {
     linha5_5.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l5_5")
+    dropSound.play()
     control = false
 
   }else if((linha4_5.childElementCount === 0) && (control === true)){
@@ -631,6 +671,7 @@ button6.addEventListener("click", () => {
     linha4_5.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l4_5")
+    dropSound.play()
     control = false
 
   }else if((linha3_5.childElementCount === 0) && (control === true)){
@@ -638,6 +679,7 @@ button6.addEventListener("click", () => {
     linha3_5.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l3_5")
+    dropSound.play()
     control = false
 
   }else if((linha2_5.childElementCount === 0) && (control === true)){
@@ -645,6 +687,7 @@ button6.addEventListener("click", () => {
     linha2_5.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l2_5")
+    dropSound.play()
     control = false
 
   }else if((linha1_5.childElementCount === 0) && (control === true)){
@@ -652,6 +695,7 @@ button6.addEventListener("click", () => {
     linha1_5.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l1_5")
+    dropSound.play()
     control = false
 
   } else if((linha0_5.childElementCount === 0) && (control === true)){
@@ -659,6 +703,7 @@ button6.addEventListener("click", () => {
     linha0_5.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l0_5")
+    dropSound.play()
     control = false
 
   }
@@ -670,6 +715,7 @@ button6.addEventListener("click", () => {
     linha5_5.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l5_5")
+    dropSound.play()
     control = true
 
   }else if((linha4_5.childElementCount === 0) && (control === false)){
@@ -677,6 +723,7 @@ button6.addEventListener("click", () => {
     linha4_5.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l4_5")
+    dropSound.play()
     control = true
 
   }else if((linha3_5.childElementCount === 0) && (control === false)){
@@ -684,7 +731,7 @@ button6.addEventListener("click", () => {
     linha3_5.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l3_5")
-    
+    dropSound.play()
     control = true
 
   }else if((linha2_5.childElementCount === 0) && (control === false)){
@@ -692,7 +739,7 @@ button6.addEventListener("click", () => {
     linha2_5.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l2_5")
-   
+    dropSound.play()
     control = true
 
 
@@ -701,7 +748,7 @@ button6.addEventListener("click", () => {
     linha1_5.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l1_5")
-    
+    dropSound.play()
     control = true
 
 
@@ -711,7 +758,7 @@ button6.addEventListener("click", () => {
     linha0_5.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l0_5")
-   
+    dropSound.play()
     control = true
 
   }
@@ -724,6 +771,7 @@ button7.addEventListener("click", () => {
     linha5_6.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l5_6")
+    dropSound.play()
     control = false
 
   }else if((linha4_6.childElementCount === 0) && (control === true)){
@@ -731,6 +779,7 @@ button7.addEventListener("click", () => {
     linha4_6.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l4_6")
+    dropSound.play()
     control = false
 
   }else if((linha3_6.childElementCount === 0) && (control === true)){
@@ -738,6 +787,7 @@ button7.addEventListener("click", () => {
     linha3_6.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l3_6")
+    dropSound.play()
     control = false
 
   }else if((linha2_6.childElementCount === 0) && (control === true)){
@@ -745,6 +795,7 @@ button7.addEventListener("click", () => {
     linha2_6.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l2_6")
+    dropSound.play()
     control = false
 
   }else if((linha1_6.childElementCount === 0) && (control === true)){
@@ -752,6 +803,7 @@ button7.addEventListener("click", () => {
     linha1_6.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l1_6")
+    dropSound.play()
     control = false
 
   } else if((linha0_6.childElementCount === 0) && (control === true)){
@@ -759,6 +811,7 @@ button7.addEventListener("click", () => {
     linha0_6.appendChild(ficha)
     ficha.classList.add("ficha_player")
     red.push("l0_6")
+    dropSound.play()
     control = false
 
   }
@@ -770,6 +823,7 @@ button7.addEventListener("click", () => {
     linha5_6.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l5_6")
+    dropSound.play()
     control = true
 
   }else if((linha4_6.childElementCount === 0) && (control === false)){
@@ -777,6 +831,7 @@ button7.addEventListener("click", () => {
     linha4_6.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l4_6")
+    dropSound.play()
     control = true
 
   }else if((linha3_6.childElementCount === 0) && (control === false)){
@@ -784,7 +839,7 @@ button7.addEventListener("click", () => {
     linha3_6.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l3_6")
-    
+    dropSound.play()
     control = true
 
   }else if((linha2_6.childElementCount === 0) && (control === false)){
@@ -792,7 +847,7 @@ button7.addEventListener("click", () => {
     linha2_6.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l2_6")
-   
+    dropSound.play()
     control = true
 
 
@@ -801,17 +856,16 @@ button7.addEventListener("click", () => {
     linha1_6.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l1_6")
-    
+    dropSound.play()
     control = true
 
 
   } else if((linha0_6.childElementCount === 0) && (control === false)){
-  
     let ficha2 = document.createElement("div")
     linha0_6.appendChild(ficha2)
     ficha2.classList.add("ficha_computer")
     black.push("l0_6")
-   
+    dropSound.play()
     control = true
 
   }
