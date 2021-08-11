@@ -88,7 +88,6 @@ function verificarDiagonalEsqMais(contador) {
     } else {
       return contador;
     }
-    console.log(comparacao)
     proximaL = Number(comparacao[1])+1;
     proximaC = Number(comparacao[3])-1;
     comparacao = `l${proximaL}_${proximaC}`;
