@@ -53,6 +53,29 @@
 }
     
 
+.ficha_player{
+    background-color: red;
+    border-radius: 90%;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.ficha_computer{
+    background-color: black;
+    border-radius: 90%;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 /*#popup{
     top: 25vh;
