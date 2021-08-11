@@ -1,4 +1,5 @@
 let discoDaVez;
+let fichaDaVez;
 let posNome;
 let tamanho;
 let preNome;
@@ -6,13 +7,17 @@ let coluna;
 let linha;
 
 function verificarVitoria() {
+  console.log(control)
   if (control === true) {
-    corDaVez = "red";
+    fichaDaVez = "red";
     discoDaVez = red[red.length -1]
   } else {
-    corDavez = "black";
+    fichaDaVez = "black";
     discoDaVez = black[black.length -1]
   }
+  console.log(control)
+  console.log(fichaDaVez)
+
   tamanho = Number(discoDaVez[3]);
   preNome = discoDaVez.substring(0,3);
   
@@ -65,15 +70,29 @@ function verificarDiagonalDirMenos(contador) {
   let proximaL = linha - 1;
   let proximaC = coluna + 1;
   let comparacao = `l${proximaL}_${proximaC}`;
-  for (let i = tamanho; i < 6; i++) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  if (fichaDaVez === "red") {
+    for (let i = tamanho; i < 6; i++) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])-1;
+      proximaC = Number(comparacao[3])+1;
+      comparacao = `l${proximaL}_${proximaC}`;
     }
-    proximaL = Number(comparacao[1])-1;
-    proximaC = Number(comparacao[3])+1;
-    comparacao = `l${proximaL}_${proximaC}`;
+  }
+  if (fichaDaVez === "black") {
+    for (let i = tamanho; i < 6; i++) {
+      if (black.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])-1;
+      proximaC = Number(comparacao[3])+1;
+      comparacao = `l${proximaL}_${proximaC}`;
+    }
   }
   return contador;
 }
@@ -82,15 +101,29 @@ function verificarDiagonalEsqMais(contador) {
   let proximaL = linha + 1;
   let proximaC = coluna - 1;
   let comparacao = `l${proximaL}_${proximaC}`;
-  for (let i = tamanho; i < 6; i++) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  if (fichaDaVez === "red") {
+    for (let i = tamanho; i < 6; i++) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])+1;
+      proximaC = Number(comparacao[3])-1;
+      comparacao = `l${proximaL}_${proximaC}`;
     }
-    proximaL = Number(comparacao[1])+1;
-    proximaC = Number(comparacao[3])-1;
-    comparacao = `l${proximaL}_${proximaC}`;
+  }
+  if (fichaDaVez === "black") {
+    for (let i = tamanho; i < 6; i++) {
+      if (black.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])+1;
+      proximaC = Number(comparacao[3])-1;
+      comparacao = `l${proximaL}_${proximaC}`;
+    }
   }
   return contador;
 }
@@ -99,15 +132,29 @@ function verificarDiagonalDirMais(contador) {
   let proximaL = linha + 1;
   let proximaC = coluna + 1;
   let comparacao = `l${proximaL}_${proximaC}`;
-  for (let i = tamanho; i < 6; i++) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  if (fichaDaVez === "red") {
+    for (let i = tamanho; i < 6; i++) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])+1;
+      proximaC = Number(comparacao[3])+1;
+      comparacao = `l${proximaL}_${proximaC}`;
     }
-    proximaL = Number(comparacao[1])+1;
-    proximaC = Number(comparacao[3])+1;
-    comparacao = `l${proximaL}_${proximaC}`;
+  }
+  if (fichaDaVez === "black") {
+    for (let i = tamanho; i < 6; i++) {
+      if (black.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])+1;
+      proximaC = Number(comparacao[3])+1;
+      comparacao = `l${proximaL}_${proximaC}`;
+    }
   }
   return contador;
 }
@@ -116,15 +163,29 @@ function verificarDiagonalEsqMenos(contador) {
   let proximaL = linha - 1;
   let proximaC = coluna - 1;
   let comparacao = `l${proximaL}_${proximaC}`;
-  for (let i = tamanho; i > 0; i--) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  if (fichaDaVez === "red") {
+    for (let i = tamanho; i > 0; i--) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])-1;
+      proximaC = Number(comparacao[3])-1;
+      comparacao = `l${proximaL}_${proximaC}`;
     }
-    proximaL = Number(comparacao[1])-1;
-    proximaC = Number(comparacao[3])-1;
-    comparacao = `l${proximaL}_${proximaC}`;
+  }
+  if (fichaDaVez === "black") {
+    for (let i = tamanho; i > 0; i--) {
+      if (black.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximaL = Number(comparacao[1])-1;
+      proximaC = Number(comparacao[3])-1;
+      comparacao = `l${proximaL}_${proximaC}`;
+    }
   }
   return contador;
 }
@@ -132,14 +193,27 @@ function verificarDiagonalEsqMenos(contador) {
 function verificarVerticalMenos(contador) {
   let proximoNr = tamanho - 1;
   let comparacao = `l${proximoNr}${posNome}`;
-  for (let i = tamanho; i > 0; i--) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  if (fichaDaVez === "red") {
+    for (let i = tamanho; i > 0; i--) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[1])-1;
+      comparacao = `l${proximoNr}${posNome}`;
     }
-    proximoNr = Number(comparacao[1])-1;
-    comparacao = `l${proximoNr}${posNome}`;
+  }
+  if (fichaDaVez === "black") {
+    for (let i = tamanho; i > 0; i--) {
+      if (black.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[1])-1;
+      comparacao = `l${proximoNr}${posNome}`;
+    }
   }
   return contador;
 }
@@ -147,14 +221,27 @@ function verificarVerticalMenos(contador) {
 function verificarVerticalMais(contador) {
   let proximoNr = tamanho + 1;
   let comparacao = `l${proximoNr}${posNome}`;
-  for (let i = tamanho; i < 6; i++) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  if (fichaDaVez === "red") {
+    for (let i = tamanho; i < 6; i++) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[1])+1;
+      comparacao = `l${proximoNr}${posNome}`;
     }
-    proximoNr = Number(comparacao[1])+1;
-    comparacao = `l${proximoNr}${posNome}`;
+  }
+  if (fichaDaVez === "black") {
+    for (let i = tamanho; i < 6; i++) {
+      if (black.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[1])+1;
+      comparacao = `l${proximoNr}${posNome}`;
+    }
   }
   return contador;
 }
@@ -163,15 +250,29 @@ function verificarHorizontalMenos(contador) {
   let proximoNr = tamanho - 1;
   let comparacao = `${preNome}${proximoNr}`;
   
-  for (let i = tamanho; i > 0; i--) {
-    if (red.includes(comparacao)) {
-      contador++;
-    } else {
-      return contador;
+  if (fichaDaVez === "red") {
+    for (let i = tamanho; i > 0; i--) {
+      if (red.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[3])-1;
+      comparacao = `${preNome}${proximoNr}`;
     }
-    proximoNr = Number(comparacao[3])-1;
-    comparacao = `${preNome}${proximoNr}`;
+  } 
+  if (fichaDaVez === "black") {
+    for (let i = tamanho; i > 0; i--) {
+      if (black.includes(comparacao)) {
+        contador++;
+      } else {
+        return contador;
+      }
+      proximoNr = Number(comparacao[3])-1;
+      comparacao = `${preNome}${proximoNr}`;
+    }
   }
+
   return contador;
 }
 
@@ -179,7 +280,7 @@ function verificarHorizontalMais(contador) {
   let proximoNr = tamanho + 1;
   let comparacao = `${preNome}${proximoNr}`;
 
-  if (corDaVez === "red") {
+  if (fichaDaVez === "red") {
     for (let i = tamanho; i < 6; i++) {
       if (red.includes(comparacao)) {
         contador++;
@@ -190,9 +291,9 @@ function verificarHorizontalMais(contador) {
       comparacao = `${preNome}${proximoNr}`;
     }
   }
-  if (corDaVez === "black") {
+  if (fichaDaVez === "black") {
     for (let i = tamanho; i < 6; i++) {
-      if (red.includes(comparacao)) {
+      if (black.includes(comparacao)) {
         contador++;
       } else {
         return contador;
