@@ -17,6 +17,11 @@ let criarMapa = () => {
     let divButton = document.createElement("div")
     divAllButtons.appendChild(divButton)
     divButton.setAttribute(`class`,`div_botao`)
+      if( b % 2 === 0){
+      divButton.classList.add("red")
+      } else{
+      divButton.classList.add("black")
+      }
 
     let criarBotao = document.createElement("button")
     divButton.appendChild(criarBotao)

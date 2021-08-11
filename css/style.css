@@ -1,14 +1,17 @@
-.divisoria {
-    background-color: rgb(0, 2, 14);
+
+.divisoria{
+    background-color: #daa520;
     width: 2%;
     height: 10vh;
 }
 
-.espaco_branco {
-    background-color: rgb(234, 234, 241);
-    ;
+
+.espaco_branco{
+    background-color: #092C0D;
     width: 100%;
     height: 10vh;
+    margin-right: 1px;
+    margin-left: 1px;    
 }
 
 .linha {
@@ -23,15 +26,20 @@
     width: 100vw;
 }
 
-#dv {
-    border-radius: 5px;
-    border: black solid;
+
+#dv{
+    border-radius: 4px;
+    border: #daa520 solid;
     width: 60vw;
+    background-color: white;
 }
 
-.botao_play {
-    height: 15px;
+
+.botao_play{
+    height: 18px;
+    width: 18px;
     border-radius: 90%;
+    
 }
 
 .div_botao {
@@ -47,13 +55,17 @@
 .div_botao button:hover {
     cursor: pointer;
     background-color: rgba(255, 0, 0, 0.671);
+    box-shadow: yellow 0 0 7px 4px;
+    
 }
 
 .all_buttons {
     display: flex;
     width: 100%;
-    height: 25px;
-    /* width: 235px; */
+
+    height: 50px;
+  /* width: 235px; */
+
 }
 
 .ficha_player {
@@ -81,7 +93,8 @@
     transform: translateY(-50%);
 }
 
-.head {
+
+.head{
     display: flex;
     justify-content: center;
     background-color: #282B2A;
@@ -140,6 +153,24 @@ body {
     display: none;
 }
 
+
+@media screen and (min-width: 550px) {
+    .head img{
+        width:60vh;
+        border-radius: 50%;
+        border: 2px solid #DAA520;
+        box-shadow: 1px 1px 25px #DAA520;
+        
+    }
+
+    .botao_play{
+        height: 22px;
+        width: 22px;
+        border-radius: 90%;
+        
+    }
+
+
 .modal--vitoria__estili {
     height: 50%;
     display: flex;
@@ -176,17 +207,5 @@ body {
 #reset:hover {
     background: #b42727;
 }
-
-footer {
-    display: flex;
-    justify-content: center;
 }
 
-@media screen and (min-width: 550px) {
-    .head img {
-        width: 60vh;
-        border-radius: 50%;
-        border: 2px solid #DAA520;
-        box-shadow: 1px 1px 25px #DAA520;
-    }
-}
