@@ -10,17 +10,17 @@ function verificarVitoria() {
   console.log(control)
   if (control === true) {
     fichaDaVez = "red";
-    discoDaVez = red[red.length -1]
+    discoDaVez = red[red.length - 1]
   } else {
     fichaDaVez = "black";
-    discoDaVez = black[black.length -1]
+    discoDaVez = black[black.length - 1]
   }
   console.log(control)
   console.log(fichaDaVez)
 
   tamanho = Number(discoDaVez[3]);
-  preNome = discoDaVez.substring(0,3);
-  
+  preNome = discoDaVez.substring(0, 3);
+
   let contador = 1;
   contador = verificarHorizontalMenos(contador);
   if (contador < 4) {
@@ -28,7 +28,7 @@ function verificarVitoria() {
   }
   if (contador < 4) {
     contador = 1;
-    posNome = discoDaVez.substring(2,4);
+    posNome = discoDaVez.substring(2, 4);
     tamanho = Number(discoDaVez[1]);
     contador = verificarVerticalMais(contador);
   }
@@ -38,23 +38,23 @@ function verificarVitoria() {
   if (contador < 4) {
     contador = 1;
     coluna = Number(discoDaVez[3]);
-    linha  = Number(discoDaVez[1]);
+    linha = Number(discoDaVez[1]);
     contador = verificarDiagonalEsqMenos(contador);
   }
   if (contador < 4) {
     coluna = Number(discoDaVez[3]);
-    linha  = Number(discoDaVez[1]);
+    linha = Number(discoDaVez[1]);
     contador = verificarDiagonalDirMais(contador);
   }
   if (contador < 4) {
     contador = 1;
     coluna = Number(discoDaVez[3]);
-    linha  = Number(discoDaVez[1]);
+    linha = Number(discoDaVez[1]);
     contador = verificarDiagonalEsqMais(contador);
   }
   if (contador < 4) {
     coluna = Number(discoDaVez[3]);
-    linha  = Number(discoDaVez[1]);
+    linha = Number(discoDaVez[1]);
     contador = verificarDiagonalDirMenos(contador);
   }
 
@@ -63,7 +63,7 @@ function verificarVitoria() {
     return
   }
   console.log(`Você venceu, conseguiu ${contador} fichas na sequência`);
-  return
+  animacao()
 }
 
 function verificarDiagonalDirMenos(contador) {
@@ -77,8 +77,8 @@ function verificarDiagonalDirMenos(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])-1;
-      proximaC = Number(comparacao[3])+1;
+      proximaL = Number(comparacao[1]) - 1;
+      proximaC = Number(comparacao[3]) + 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -89,8 +89,8 @@ function verificarDiagonalDirMenos(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])-1;
-      proximaC = Number(comparacao[3])+1;
+      proximaL = Number(comparacao[1]) - 1;
+      proximaC = Number(comparacao[3]) + 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -108,8 +108,8 @@ function verificarDiagonalEsqMais(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])+1;
-      proximaC = Number(comparacao[3])-1;
+      proximaL = Number(comparacao[1]) + 1;
+      proximaC = Number(comparacao[3]) - 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -120,8 +120,8 @@ function verificarDiagonalEsqMais(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])+1;
-      proximaC = Number(comparacao[3])-1;
+      proximaL = Number(comparacao[1]) + 1;
+      proximaC = Number(comparacao[3]) - 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -139,8 +139,8 @@ function verificarDiagonalDirMais(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])+1;
-      proximaC = Number(comparacao[3])+1;
+      proximaL = Number(comparacao[1]) + 1;
+      proximaC = Number(comparacao[3]) + 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -151,8 +151,8 @@ function verificarDiagonalDirMais(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])+1;
-      proximaC = Number(comparacao[3])+1;
+      proximaL = Number(comparacao[1]) + 1;
+      proximaC = Number(comparacao[3]) + 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -170,8 +170,8 @@ function verificarDiagonalEsqMenos(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])-1;
-      proximaC = Number(comparacao[3])-1;
+      proximaL = Number(comparacao[1]) - 1;
+      proximaC = Number(comparacao[3]) - 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -182,8 +182,8 @@ function verificarDiagonalEsqMenos(contador) {
       } else {
         return contador;
       }
-      proximaL = Number(comparacao[1])-1;
-      proximaC = Number(comparacao[3])-1;
+      proximaL = Number(comparacao[1]) - 1;
+      proximaC = Number(comparacao[3]) - 1;
       comparacao = `l${proximaL}_${proximaC}`;
     }
   }
@@ -200,7 +200,7 @@ function verificarVerticalMenos(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[1])-1;
+      proximoNr = Number(comparacao[1]) - 1;
       comparacao = `l${proximoNr}${posNome}`;
     }
   }
@@ -211,7 +211,7 @@ function verificarVerticalMenos(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[1])-1;
+      proximoNr = Number(comparacao[1]) - 1;
       comparacao = `l${proximoNr}${posNome}`;
     }
   }
@@ -228,7 +228,7 @@ function verificarVerticalMais(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[1])+1;
+      proximoNr = Number(comparacao[1]) + 1;
       comparacao = `l${proximoNr}${posNome}`;
     }
   }
@@ -239,7 +239,7 @@ function verificarVerticalMais(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[1])+1;
+      proximoNr = Number(comparacao[1]) + 1;
       comparacao = `l${proximoNr}${posNome}`;
     }
   }
@@ -249,7 +249,7 @@ function verificarVerticalMais(contador) {
 function verificarHorizontalMenos(contador) {
   let proximoNr = tamanho - 1;
   let comparacao = `${preNome}${proximoNr}`;
-  
+
   if (fichaDaVez === "red") {
     for (let i = tamanho; i > 0; i--) {
       if (red.includes(comparacao)) {
@@ -257,10 +257,10 @@ function verificarHorizontalMenos(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[3])-1;
+      proximoNr = Number(comparacao[3]) - 1;
       comparacao = `${preNome}${proximoNr}`;
     }
-  } 
+  }
   if (fichaDaVez === "black") {
     for (let i = tamanho; i > 0; i--) {
       if (black.includes(comparacao)) {
@@ -268,7 +268,7 @@ function verificarHorizontalMenos(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[3])-1;
+      proximoNr = Number(comparacao[3]) - 1;
       comparacao = `${preNome}${proximoNr}`;
     }
   }
@@ -287,7 +287,7 @@ function verificarHorizontalMais(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[3])+1;
+      proximoNr = Number(comparacao[3]) + 1;
       comparacao = `${preNome}${proximoNr}`;
     }
   }
@@ -298,7 +298,7 @@ function verificarHorizontalMais(contador) {
       } else {
         return contador;
       }
-      proximoNr = Number(comparacao[3])+1;
+      proximoNr = Number(comparacao[3]) + 1;
       comparacao = `${preNome}${proximoNr}`;
     }
   }
