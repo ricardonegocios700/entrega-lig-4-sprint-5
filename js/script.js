@@ -1164,11 +1164,3 @@ button7.addEventListener("click", () => {
 
   }
 })
-
-let botao = document.getElementById("popup__button")
-botao.addEventListener("click", minhaFuncao)
-
-function minhaFuncao(){
-  let exibir = document.getElementById("openInformation")
-  exibir.style.visibility = "hidden"
-}

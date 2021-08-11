@@ -7,7 +7,7 @@ let coluna;
 let linha;
 
 function verificarVitoria() {
-  console.log(control)
+  
   if (control === true) {
     fichaDaVez = "red";
     discoDaVez = red[red.length -1]
@@ -15,8 +15,8 @@ function verificarVitoria() {
     fichaDaVez = "black";
     discoDaVez = black[black.length -1]
   }
-  console.log(control)
-  console.log(fichaDaVez)
+  
+  
 
   tamanho = Number(discoDaVez[3]);
   preNome = discoDaVez.substring(0,3);
