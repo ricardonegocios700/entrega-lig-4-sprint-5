@@ -26,9 +26,9 @@ function draw() {
         res3.style.display = 'block'
         }
         
-        let botao3 = document.getElementById('reset3')
+        let botao4 = document.getElementById('reset3')
         
-        botao3.addEventListener('click', function (event){
+        botao4.addEventListener('click', function (event){
         window.location.reload()
         })
         
