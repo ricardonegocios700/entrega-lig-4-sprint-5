@@ -429,7 +429,7 @@ justify-content: center;
 
 
     #dv{
-        width: 70vw;
+        width: 60vw;
     }
     .ficha_computer{
         width: 50px;
@@ -451,7 +451,7 @@ justify-content: center;
 
     }
     .head img{
-        width:60vh;
+        width:200px;
         border-radius: 50%;
         border: 2px solid #DAA520;
         box-shadow: 1px 1px 25px #DAA520;
@@ -465,8 +465,8 @@ justify-content: center;
         
     }
     .information{
-    width: 50vw;
-    left: 25vw;
+    width: 40vw;
+    left: 30vw;
     }
 
     #reset{
