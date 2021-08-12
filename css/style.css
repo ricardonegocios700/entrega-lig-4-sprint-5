@@ -89,7 +89,7 @@ html{
 
 .ficha_player {
     background-color: rgb(234, 234, 241);
-    background-image: url(/img/ficha_poker_red.png);
+    background-image: url(../img/ficha_poker_red.png);
     border-radius: 90%;
     width: 48px;
     height: 48px;
@@ -102,7 +102,7 @@ html{
 
 .ficha_computer {
     background-color: rgb(234, 234, 241);
-    background-image: url(/img/ficha_poker_black.png);
+    background-image: url(../img/ficha_poker_black.png);
     border-radius: 90%;
     width: 48px;
     height: 48px;
