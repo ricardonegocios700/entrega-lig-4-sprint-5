@@ -112,6 +112,9 @@ html{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    transition: transform 4s;/*victor achou melhor
+    usar um transition só q fiquei um pouco enrolada
+    pois eu n sei se é pra pegar o transform ou uma outra propriedade. */
 }
 
 .ficha_computer {
@@ -125,7 +128,11 @@ html{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-}
+    transition: transform 4s;
+ }
+
+
+
 .information {
     top: 15vh;
     left: 20vw;
