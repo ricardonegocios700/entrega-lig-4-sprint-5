@@ -8,11 +8,24 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
     <section class="head">
         <img src="./img/LIG4 (1).png" alt="logo">
+        <a id="information__btn">Informações</a>
     </section>
+    <section id="openInformation" class="information">
+        <h1>Lig 4</h1>
+        <h2>Regras do jogo:</h2>
+        <p>Chame alguém para jogar com você e escolha entre as fichas pretas e vermelhas;</p>
+        <p>- Clique no botão da coluna que deseja jogar sua próxima ficha;</p>
+        <p>- Ganha quem enfileirar 4 fichas da mesma cor em linha horizontal, vertical ou diagonal.</p>
+        
+        <button id="popup__button">Fechar</button>
+    </section>
+
 <section>
     <audio src="/audio/ficha_drop.wav" id="drop_sound"></audio>
 </section>    
@@ -61,6 +74,9 @@
     </footer>
     <script src="./js/vitoria.js"></script>
     <script src="./js/script.js"></script>
+
+    <script src="./js/modal.js"></script>
+
     <script src="./js/jogadorVenceu.js"></script>
 </body>
 </html>
