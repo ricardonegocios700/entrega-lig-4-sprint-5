@@ -497,21 +497,21 @@ justify-content: center;
 
 @media screen and (min-width: 1020px) {
     .modal--vitoria{
-        margin-top:-13.8vh;
+        margin-top:-25.5vh;
     }
     
     .modal--vitoria2{
-        margin-top:-13.8vh;
+        margin-top:-25.5vh;
     }
 
     .modal--empate{
-        margin-top:-13.8vh;
+        margin-top:-25.5vh;
     }
 }
 
 @media screen and (min-width: 1500px) {
     .modal--vitoria{
-        margin-top:-15.2vh;
+        margin-top:-18.2vh;
     }
     
     .modal--vitoria2{

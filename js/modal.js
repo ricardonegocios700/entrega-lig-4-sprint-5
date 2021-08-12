@@ -15,4 +15,8 @@ function visibilityInformation(){
   let element = document.getElementById("openInformation");
   element.style.visibility = "visible"
 }
+function escondeScroll() {
+  document.documentElement.style.overflow = 'hidden';
+  document.body.scroll = "no";
+}
 // fim
