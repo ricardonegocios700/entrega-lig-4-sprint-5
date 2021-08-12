@@ -61,9 +61,14 @@ function verificarVitoria() {
   if (contador < 4) {
     console.log(`Siga o jogo`);
     return
+  } else if((contador >= 4) && (control === true)){
+    console.log(`Você venceu, conseguiu ${contador} fichas na sequência`);
+    victoryPlayer1()
+  } else if ((contador >= 4) && (control === false)){
+    console.log(`Você venceu, conseguiu ${contador} fichas na sequência`);
+    victoryPlayer2()
   }
-  console.log(`Você venceu, conseguiu ${contador} fichas na sequência`);
-  animacao()
+  
 }
 
 function verificarDiagonalDirMenos(contador) {
