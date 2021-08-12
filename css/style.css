@@ -262,7 +262,17 @@ justify-content: center;
     display: flex;
     justify-content: center;
 }
-
+.modal__estili{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 20vh;
+    font-size: 26px;
+}
+.modal__button{
+    display: flex;
+    justify-content: center;
+}
 
 .modal--vitoria {
     width: 100vw;
@@ -273,7 +283,8 @@ justify-content: center;
     transform: translate(-50%, -10%);
     background: rgba(253, 4, 4, 0.75);
     display: none;
-    margin-top:-25vh;
+    margin-top:-21vh;
+    color: white;
 }
 
 .modal--vitoria2 {
@@ -285,7 +296,8 @@ justify-content: center;
     transform: translate(-50%, -10%);
     background: rgba(0, 0, 0, 0.75);
     display: none;
-    margin-top:-25vh;
+    margin-top:-21vh;
+    color: white;
 }
 
 
@@ -298,7 +310,69 @@ justify-content: center;
     transform: translate(-50%, -10%);
     background: rgba(87, 1, 247, 0.75);
     display: none;
-    margin-top:-25vh;
+    margin-top:-21vh;
+    color: white;
+}
+#reset {
+
+    width: 36%;
+    max-width: 285px;
+    height: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background: #114e18;
+    color: rgb(238, 225, 225);
+    transition: all .2s;
+    transform: scale(1.05 , 1.05);
+    
+    
+}
+
+#reset2 {
+
+    width: 50%;
+    max-width: 285px;
+    height: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#reset2:hover {
+    background: #114e18;
+    color: rgb(238, 225, 225);
+    transition: all .2s;
+    transform: scale(1.05 , 1.05);
+}
+
+#reset3 {
+    width: 50%;
+    max-width: 285px;
+    height: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
+#reset3:hover {
+    background: #114e18;
+    color: rgb(238, 225, 225);
+    transition: all .2s;
+    transform: scale(1.05 , 1.05);
 }
 
 
@@ -339,6 +413,16 @@ justify-content: center;
         box-shadow: 1px 1px 25px #DAA520;
         
     }
+    .modal--vitoria{
+        margin-top: -26vh;
+    }
+    .modal--vitoria2{
+        margin-top: -26vh;
+    }
+    .modal--empate{
+        margin-top: -26vh;
+        font-size: 40px;
+    }
 
 .modal--vitoria__estili {
     height: 50%;
@@ -353,7 +437,7 @@ justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 40px;
-    margin-top: 35vh;
+    margin-top: 5vh;
 }
 
 .modal__button {
