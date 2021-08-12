@@ -96,10 +96,16 @@ html{
 .black{
     background-color: #0A0A0A;
 }
-
 .ficha_player {
-    background-color: rgb(234, 234, 241);
     background-image: url(../img/ficha_poker_red.png);
+
+}
+.ficha_computer {
+    background-image: url(../img/ficha_poker_black.png);
+}
+
+.ficha_player, .ficha_computer {
+    background-color: rgb(234, 234, 241);
     border-radius: 90%;
     /* width: 48px;
     height: 48px; */
@@ -111,26 +117,20 @@ html{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    animation: 0.7s linear fichaCaindo;
+    animation: 1s linear giro;
 }
-
-    @keyframes fichaCaindo {
+   /* @keyframes fichaCaindo {
         from { transform: translateY(-500px); }
+    }*/
+    @keyframes giro {
+        from { 
+            transform: rotateY(0deg) translateY(-50%);
+        }
+        to   { 
+            transform: rotateY(720deg) translateY(-50%);
+         }
     }
 
-.ficha_computer {
-    background-color: rgb(234, 234, 241);
-    background-image: url(../img/ficha_poker_black.png);
-    border-radius: 90%;
-    width: 38px;
-    height: 38px;
-    background-size: 38px 38px;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: 0.7s linear fichaCaindo;
-}
 .information {
     top: 15vh;
     left: 20vw;
