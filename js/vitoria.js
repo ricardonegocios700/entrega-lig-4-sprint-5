@@ -59,14 +59,19 @@ function verificarVitoria() {
   }
 
   if (contador < 4) {
+    console.log(red)
     console.log(`Siga o jogo`);
-    return
-  } else if((contador >= 4) && (control === true)){
+  } else if((contador === 4) && (control === true)){
     console.log(`Você venceu, conseguiu ${contador} fichas na sequência`);
     victoryPlayer1()
-  } else if ((contador >= 4) && (control === false)){
+  } else if ((contador === 4) && (control === false)){
     console.log(`Você venceu, conseguiu ${contador} fichas na sequência`);
     victoryPlayer2()
+  }
+  
+  
+  if((red.length === 21) && (black.length === 21)){
+    draw()
   }
   
 }
