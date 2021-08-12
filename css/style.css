@@ -113,27 +113,56 @@ html{
 }
 .information {
     top: 15vh;
-    left: 25vw;
-    height: 60vh;
-    width: 50vw;
+    left: 20vw;
+    height: 65vh;
+    width: 60vw;
     position:absolute;
-    background-color: rgba(0, 255, 255, 0.486);
+    background-color: #282B2A;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 14px;
-    border-top: 5px solid ;
-    border-bottom: 5px solid;
+    border-top: 5px solid #daa520;
+    border-bottom: 5px solid #daa520;
     font-size: 18px;
     visibility: hidden;
+    color: aliceblue;
+    box-shadow: 1px 1px 30px #0A0A0A;
 }
 .information p {
     width: 87%;
     margin: 5px;
 }
-
-
+.information button{
+    margin-top: 4vh;
+    border-radius: 5px;
+    background-color: #0A0A0A;
+    color: white;
+    box-shadow: 1px 1px 10px #daa520;
+}
+.information button:hover {
+    cursor: pointer;
+    background-color:  #daa520;
+    color: #0A0A0A;
+    transform: scale(1.1,1.1);
+    box-shadow: 1px 1px 15px #0A0A0A;
+}
+#information__btn{
+    background-color:#0A0A0A;
+    color: aliceblue;
+    padding: 10px 20px;
+    margin-top: 4vh;
+    border-radius: 14px;
+    box-shadow: 1px 1px 8px #daa520;
+    transition: all .2s;
+}
+#information__btn:hover{
+    background-color: #daa520;
+    color: #0A0A0A;
+    box-shadow: 1px 1px 20px #0A0A0A;
+    cursor: pointer;
+}
 .head{
     display: flex;
     flex-direction: column;
@@ -190,7 +219,10 @@ body {
     display: flex;
     align-items: center;
     margin-top: 1vh;
-   margin-right: 1vw;
+   margin-right: 2vw;
+}
+.name__link:hover{
+    border-bottom: 1px solid #daa520;
 }
 
 .modal--vitoria2 {
@@ -265,7 +297,10 @@ justify-content: center;
         border-radius: 90%;
         
     }
-
+.information{
+    width: 50vw;
+    left: 25vw;
+}
 
 .modal--vitoria__estili {
     height: 50%;
@@ -289,8 +324,6 @@ justify-content: center;
     justify-content: center;
 }
 
-
-}
 
 #reset {
     width: 50%;
@@ -322,13 +355,4 @@ justify-content: center;
     background: #b42727;
 }
 
-
-@media screen and (min-width: 550px) {
-    .head img{
-        width:60vh;
-        border-radius: 50%;
-        border: 2px solid #DAA520;
-        box-shadow: 1px 1px 25px #DAA520;
-        
-    }
 }
