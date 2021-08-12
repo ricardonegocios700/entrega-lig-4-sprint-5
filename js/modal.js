@@ -1,7 +1,7 @@
 // MODAL INFORMAÇÕES
 // inicio
-let botao = document.getElementById("popup__button");
-botao.addEventListener("click", hiddenInformation);
+let botao3 = document.getElementById("popup__button");
+botao3.addEventListener("click", hiddenInformation);
 
 function hiddenInformation(){
   let element = document.getElementById("openInformation");
