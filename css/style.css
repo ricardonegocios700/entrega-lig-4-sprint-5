@@ -85,7 +85,7 @@ html{
     width: 100%;
 
     height: 50px;
-  /* width: 235px; */
+ 
 
 }
 
@@ -263,13 +263,6 @@ justify-content: center;
     justify-content: center;
 }
 
-/* .head img{
-    width:60vh;
-    border-radius: 50%;
-    border: 2px solid #DAA520;
-    box-shadow: 1px 1px 25px #DAA520;
-    
-} */
 
 .modal--vitoria {
     width: 100vw;
@@ -347,17 +340,6 @@ justify-content: center;
         
     }
 
-    .botao_play{
-        height: 22px;
-        width: 22px;
-        border-radius: 90%;
-        
-    }
-.information{
-    width: 50vw;
-    left: 25vw;
-}
-
 .modal--vitoria__estili {
     height: 50%;
     display: flex;
@@ -386,9 +368,7 @@ justify-content: center;
 
     width: 50%;
     max-width: 285px;
-    height: 25%;
-    width: 20%;
-    height: 15%;
+    height: 20%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -398,17 +378,19 @@ justify-content: center;
 }
 
 #reset:hover {
-    background: #37cc11;
+    background: #114e18;
     color: rgb(238, 225, 225);
+    transition: all .2s;
+    transform: scale(1.05 , 1.05);
+    
+    
 }
 
 #reset2 {
 
     width: 50%;
     max-width: 285px;
-    height: 25%;
-    width: 20%;
-    height: 15%;
+    height: 20%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -418,14 +400,16 @@ justify-content: center;
 }
 
 #reset2:hover {
-    background: #37cc11;
+    background: #114e18;
     color: rgb(238, 225, 225);
+    transition: all .2s;
+    transform: scale(1.05 , 1.05);
 }
 
 #reset3 {
     width: 50%;
     max-width: 285px;
-    height: 25%;
+    height: 20%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -436,9 +420,70 @@ justify-content: center;
 
 
 #reset3:hover {
-    background: #37cc11;
+    background: #114e18;
     color: rgb(238, 225, 225);
+    transition: all .2s;
+    transform: scale(1.05 , 1.05);
 }
+
+
+
+    #dv{
+        width: 70vw;
+    }
+    .ficha_computer{
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+    }
+    .ficha_player{
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+    .footer{
+        width: 90vw;
+        flex-direction: column;
+
+    }
+    .head img{
+        width:60vh;
+        border-radius: 50%;
+        border: 2px solid #DAA520;
+        box-shadow: 1px 1px 25px #DAA520;
+        
+    }
+
+    .botao_play{
+        height: 22px;
+        width: 22px;
+        border-radius: 90%;
+        
+    }
+    .information{
+    width: 50vw;
+    left: 25vw;
+    }
+
+    #reset{
+    height: 16%;
+    width: 35%;   
+    }
+
+    #reset2{
+    height: 16%;
+    width: 35%;   
+    }
+
+    #reset3{
+    height: 16%;
+    width: 35%;   
+    }
+
 
 .information{
     height: 65vh;
@@ -448,6 +493,8 @@ justify-content: center;
    position: absolute;
    margin-bottom:6vh;
 }
+}
+
 @media screen and (min-width: 1020px) {
     .modal--vitoria{
         margin-top:-13.8vh;
@@ -473,8 +520,4 @@ justify-content: center;
     .modal--empate{
         margin-top:-15.2vh;
     }
-}
-
-
-
 }
