@@ -59,11 +59,15 @@ function verificarVitoria() {
   }
 
   if (contador < 4) {
-    return 
-  } else if((contador >= 4) && (control === true)){
+  } else if((contador === 4) && (control === true)){
     victoryPlayer1()
-  } else if ((contador >= 4) && (control === false)){
+  } else if ((contador === 4) && (control === false)){
     victoryPlayer2()
+  }
+  
+  
+  if((red.length === 21) && (black.length === 21)){
+    draw()
   }
   
 }

@@ -19,4 +19,16 @@ function victoryPlayer2() {
         botao2.addEventListener('click', function (event){
         window.location.reload()
         })
-    
+
+
+function draw() {
+        let res3 = document.getElementById('modal3')
+        res3.style.display = 'block'
+        }
+        
+        let botao4 = document.getElementById('reset3')
+        
+        botao4.addEventListener('click', function (event){
+        window.location.reload()
+        })
+        

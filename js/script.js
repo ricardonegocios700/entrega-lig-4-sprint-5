@@ -1171,10 +1171,18 @@ button7.addEventListener("click", () => {
 })
 
 function mudaABolinha() {
-  let documento = document.getElementsByClassName('div_botaoRed')
-    let x = [... documento]
-    for(let i = 0; i < x.length; i++){
-      x[i].classList.replace('div_botaoRed', 'div_botaoBlack')
-    }
+  if (control === true) {
+    let documento = document.getElementsByClassName('div_botaoRed')
+      let x = [... documento]
+      for(let i = 0; i < x.length; i++){
+        x[i].classList.replace('div_botaoRed', 'div_botaoBlack')
+      }
+  } else {
+    let documento = document.getElementsByClassName('div_botaoBlack')
+      let x = [... documento]
+      for(let i = 0; i < x.length; i++){
+        x[i].classList.replace('div_botaoBlack', 'div_botaoRed')
+      }
+  }
 }
 
