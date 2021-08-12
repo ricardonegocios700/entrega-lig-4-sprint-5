@@ -47,7 +47,7 @@ html{
     
 }
 
-.div_botao {
+.div_botaoRed, .div_botaoBlack {
     background-color: rgb(234, 234, 241);
     width: 15%;
     display: flex;
@@ -58,13 +58,24 @@ html{
     /* border: #ccc solid 1px; */
     
 }
-.div_botao button{
+.div_botaoRed button{
     transition: all .2s;
 }
 
-.div_botao button:hover {
+.div_botaoRed button:hover {
     cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.671);
+    background-color: rgba(255, 0, 0, 0.671); 
+    box-shadow: #daa520 0 0 7px 4px;
+    transform: scale(1.1 , 1.1);
+    
+}
+.div_botaoBlack button{
+    transition: all .2s;
+}
+
+.div_botaoBlack button:hover {
+    cursor: pointer;
+    background-color:black; 
     box-shadow: #daa520 0 0 7px 4px;
     transform: scale(1.1 , 1.1);
     
