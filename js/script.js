@@ -783,9 +783,9 @@ button5.addEventListener("click", () => {
     control = false
 
   }
+
   
-
-
+  
   else if((linha5_4.childElementCount === 0) && (control === false)){
     let ficha2 = document.createElement("div")
     linha5_4.appendChild(ficha2)
@@ -1169,4 +1169,3 @@ button7.addEventListener("click", () => {
 
   }
 })
-
