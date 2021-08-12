@@ -16,7 +16,7 @@ let criarMapa = () => {
   for(let b = 0; b < 7; b++){
     let divButton = document.createElement("div")
     divAllButtons.appendChild(divButton)
-    divButton.setAttribute(`class`,`div_botao`)
+    divButton.setAttribute(`class`,`div_botaoRed`)
       if( b % 2 === 0){
       divButton.classList.add("red")
       } else{
@@ -1169,3 +1169,13 @@ button7.addEventListener("click", () => {
 
   }
 })
+
+function mudaABolinha() {
+    let x = document.getElementsByClassName('div_botaoRed')
+    for(let i = 0; i < x.length; i++){
+      x[i].classList.replace('div_botaoRed', 'div_botaoBlack')
+    }
+}
+
+mudaABolinha()
+
