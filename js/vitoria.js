@@ -61,13 +61,18 @@ function verificarVitoria() {
   if (contador < 4) {
   } else if((contador === 4) && (control === true)){
     victoryPlayer1()
+    escondeScroll();
   } else if ((contador === 4) && (control === false)){
     victoryPlayer2()
+    escondeScroll();
+
   }
   
   
   if((red.length === 21) && (black.length === 21)){
     draw()
+    escondeScroll();
+
   }
   
 }
