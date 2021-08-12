@@ -7,7 +7,7 @@ let coluna;
 let linha;
 
 function verificarVitoria() {
-  
+  mudaABolinha()
   if (control === true) {
     fichaDaVez = "red";
     discoDaVez = red[red.length - 1]
