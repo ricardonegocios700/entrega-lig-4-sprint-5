@@ -1,4 +1,6 @@
-
+html{
+    overflow-x: hidden;
+}
 .divisoria{
     background-color: #daa520;
     width: 2%;
@@ -21,17 +23,20 @@
 #game {
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
     width: 100vw;
+    
 }
 
 
 #dv{
     border-radius: 4px;
-    border: #daa520 solid;
+    border:2px #daa520 solid;
     width: 60vw;
-    background-color: white;
+    box-shadow: 1px 1px 15px #daa520;
+    
 }
 
 
@@ -49,13 +54,19 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    border: #ccc solid 1px;
+    border: #daa520 solid 1px;
+    /* border: #ccc solid 1px; */
+    
+}
+.div_botao button{
+    transition: all .2s;
 }
 
 .div_botao button:hover {
     cursor: pointer;
     background-color: rgba(255, 0, 0, 0.671);
-    box-shadow: yellow 0 0 7px 4px;
+    box-shadow: #daa520 0 0 7px 4px;
+    transform: scale(1.1 , 1.1);
     
 }
 
@@ -111,10 +122,14 @@
 }
 
 .head img {
-    width: 80vw;
+    width: 80%;
     border-radius: 50%;
     border: 2px solid #DAA520;
     box-shadow: 1px 1px 15px #DAA520;
+    transition: all .2s;
+}
+.head img:hover{
+    transform: scale(1.1,1.1);
 }
 
 body {
@@ -129,17 +144,17 @@ body {
 .footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     border: 1.5px solid #DAA520;
-    height: 6vh;
+    height: 10vh;
     background-color: #282B2A;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 95vw;
 }
 
-.linkedin {}
 
 .name__link {
     text-decoration: none;
@@ -147,7 +162,7 @@ body {
     display: flex;
     align-items: center;
     margin-top: 1vh;
-    margin-right: 4vw;
+   margin-right: 1vw;
 }
 
 .modal--vitoria {
@@ -160,9 +175,30 @@ body {
     background: rgba(0, 0, 0, 0.75);
     display: none;
 }
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+/* .head img{
+    width:60vh;
+    border-radius: 50%;
+    border: 2px solid #DAA520;
+    box-shadow: 1px 1px 25px #DAA520;
+    
+} */
 
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 696px) {
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+    .footer{
+        width: 90vw;
+        flex-direction: column;
+
+    }
     .head img{
         width:60vh;
         border-radius: 50%;
