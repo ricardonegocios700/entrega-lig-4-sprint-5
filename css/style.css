@@ -149,6 +149,7 @@ html{
     visibility: hidden;
     color: aliceblue;
     box-shadow: 1px 1px 30px #0A0A0A;
+    z-index: 2;
 }
 .information p {
     width: 87%;
