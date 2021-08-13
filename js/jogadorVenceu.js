@@ -1,6 +1,9 @@
+
+let victorySound = document.getElementById("victory_sound")
 function victoryPlayer1() {
     let res = document.getElementById('modal')
     res.style.display = 'block'
+    victorySound.play()
     }
     
     let botao = document.getElementById('reset')
@@ -12,6 +15,7 @@ function victoryPlayer1() {
 function victoryPlayer2() {
         let res2 = document.getElementById('modal2')
         res2.style.display = 'block'
+        victorySound.play()
         }
         
         let botao2 = document.getElementById('reset2')
