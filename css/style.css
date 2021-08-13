@@ -290,7 +290,7 @@ justify-content: center;
     transform: translate(-50%, -10%);
     background: rgba(253, 4, 4, 0.75);
     display: none;
-    margin-top:-21vh;
+    margin-top:-22.5vh;
     color: white;
 }
 
@@ -303,7 +303,7 @@ justify-content: center;
     transform: translate(-50%, -10%);
     background: rgba(0, 0, 0, 0.75);
     display: none;
-    margin-top:-21vh;
+    margin-top:-22.5vh;
     color: white;
 }
 
@@ -317,7 +317,7 @@ justify-content: center;
     transform: translate(-50%, -10%);
     background: rgba(87, 1, 247, 0.75);
     display: none;
-    margin-top:-21vh;
+    margin-top:-22.5vh;
     color: white;
 }
 #reset {
@@ -421,13 +421,13 @@ justify-content: center;
         
     }
     .modal--vitoria{
-        margin-top: -26vh;
+        margin-top: -27.5vh;
     }
     .modal--vitoria2{
-        margin-top: -26vh;
+        margin-top: -27.5vh;
     }
     .modal--empate{
-        margin-top: -26vh;
+        margin-top: -27.5vh;
         font-size: 40px;
     }
 
@@ -588,27 +588,27 @@ justify-content: center;
 
 @media screen and (min-width: 1020px) {
     .modal--vitoria{
-        margin-top:-25.5vh;
+        margin-top:-27.5vh;
     }
     
     .modal--vitoria2{
-        margin-top:-25.5vh;
+        margin-top:-27.5vh;
     }
 
     .modal--empate{
-        margin-top:-25.5vh;
+        margin-top:-27.5vh;
     }
 }
 
 @media screen and (min-width: 1500px) {
     .modal--vitoria{
-        margin-top:-18.2vh;
+        margin-top:-27.5vh;
     }
     
     .modal--vitoria2{
-        margin-top:-15.2vh;
+        margin-top:-27.5vh;
     }
     .modal--empate{
-        margin-top:-15.2vh;
+        margin-top:-27.5vh;
     }
 }
